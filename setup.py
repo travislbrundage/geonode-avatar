@@ -54,7 +54,7 @@ that are required.  A minimal integration can work like this:
 3.  Somewhere in your template navigation scheme, link to the change avatar
     page::
 
-        <a href="{% url avatar_change %}">Change your avatar</a>
+        <a href="{% url avatar:change %}">Change your avatar</a>
 
 4.  Wherever you want to display an avatar for a user, first load the avatar
     template tags::
@@ -83,7 +83,7 @@ Changing an avatar
 ~~~~~~~~~~~~~~~~~~
 
 The actual view function is located at ``avatar.views.change``, and this can
-be referenced by the url name ``avatar_change``.  It takes two keyword
+be referenced by the url name ``avatar:change``.  It takes two keyword
 arguments: ``extra_context`` and ``next_override``.  If ``extra_context`` is
 provided, that context will be placed into the template's context.
 
@@ -99,7 +99,7 @@ Deleting an avatar
 ~~~~~~~~~~~~~~~~~~
 
 The actual view function is located at ``avatar.views.delete``, and this can be
-referenced by the url name ``avatar_delete``.  It takes the same two keyword
+referenced by the url name ``avatar:delete``.  It takes the same two keyword
 arguments as ``avatar.views.change`` and follows the same redirection rules
 as well.
 
